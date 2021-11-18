@@ -1,7 +1,7 @@
 {
-  "name": "npm-managment",
+  "name": "cowboy-bebop-random-message",
   "version": "1.0.0",
-  "description": "building and deploy of a npm package",
+  "description": "gives you a random message",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,11 +9,19 @@
   "keywords": [
     "javascript",
     "node",
-    "package"
+    "package",
+    "npm",
+    "Cowboy Bebop",
+    "Anime",
+    "Quote"
   ],
   "author": "Renato Mercado Luna <renatomercadoluna@hotmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "moment": "^2.29.1"
-  }
+  "optionalDependencies": {
+    "eslint": "^8.2.0"
+  },
+  "bin": {
+    "cowboy-random-msg": "./bin/global.js"
+  },
+  "preferGlobal": true
 }
