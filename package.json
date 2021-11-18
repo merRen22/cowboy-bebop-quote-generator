@@ -1,6 +1,6 @@
 {
   "name": "cowboy-bebop-random-message",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gives you a random message",
   "main": "src/index.js",
   "scripts": {
