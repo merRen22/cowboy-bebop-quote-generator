@@ -21,7 +21,7 @@ const quote = () => {
 };
 
 const image = async (path) => {
-  const phrase = quote().replace('-', '\n');
+  const phrase = quote();
   const dirPath = userPath.join(__dirname, '/assets');
   var quotes = require(`${dirPath}/quotes/q_${assetName}.json`);
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -35,7 +35,7 @@ const image = async (path) => {
     10,
     250,
     {
-      text: pharse,
+      text: phrase.replace('-', '\n'),
       alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
       alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE,
     },
