@@ -21,7 +21,19 @@
     "eslint": "^8.2.0"
   },
   "bin": {
-    "cowboy-random-msg": "./bin/global.js"
+    "cowboy-random-msg": "bin/global.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "dependencies": {
+    "jimp": "^0.16.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merRen22/cowboy-bebop-quote-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/merRen22/cowboy-bebop-quote-generator/issues"
+  },
+  "homepage": "https://github.com/merRen22/cowboy-bebop-quote-generator#readme"
 }

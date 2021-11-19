@@ -1,23 +1,44 @@
-class Quote {
-  constructor(author, phrase) {
-    this.author = author;
-    this.phrase = phrase;
-  }
-}
+const characters = [
+  'Andy Von De Oniyate',
+  'Laughing Bull',
+  'Faye Valentine',
+  'Gren',
+  'Jet Black',
+  'Spike Spiegel',
+  'Vicious',
+  'Vincent Volajau',
+];
 
-//Spike Spiegel
-//Keiko Nobumoto
-//Jet Black
-//Vicious
-//Faye Valentine
-//londes
-//Vincent Volaju
-//Andy Von De Oniyate
-// Laughing Bull
-
-const randomMsg = () => {
+const quote = () => {
+  const character = characters[Math.floor(Math.random() * characters.length)];
+  const assetName = character.replace(/\ .*/g, "$'").toLowerCase();
+  var quotes = require(`./q_${assetName}.json`);
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  return `${quote.phrase} - ${quote.author}`;
+  return `${quote} - ${character}`;
 };
 
-module.exports = { randomMsg };
+const image = async (path) => {
+  const phrase = quote().replace('-', '\n');
+  var quotes = require(`./q_${assetName}.json`);
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  let maxWidth = 200;
+  let maxHeight = 50;
+  const Jimp = require('jimp');
+  const image = await Jimp.read(`./assets/img/${quote}.jpg`);
+  const font = await Jimp.loadFont(Jimp.FONT_SANS_16_WHITE);
+  image.print(
+    font,
+    10,
+    250,
+    {
+      text: pharse,
+      alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
+      alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE,
+    },
+    maxWidth,
+    maxHeight
+  );
+  await image.writeAsync(path);
+};
+
+module.exports = { quote, image };
