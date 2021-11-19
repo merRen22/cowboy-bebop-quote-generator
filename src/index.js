@@ -19,7 +19,7 @@ const quote = () => {
 
 const image = async (path) => {
   const phrase = quote().replace('-', '\n');
-  var quotes = require(`./q_${assetName}.json`);
+  var quotes = require(`./assets/quotes/q_${assetName}.json`);
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
   let maxWidth = 200;
   let maxHeight = 50;
