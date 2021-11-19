@@ -17,8 +17,8 @@ let cowboy = require('cowboy-bebop-random-message');
 const quote = cowboy.quote();
 console.log(quote);
 
-// get an image with a quote to a desire path
-random.image('./');
+// get a png image with a quote to a desire path
+random.image('.');
 ```
 
 # Contributing

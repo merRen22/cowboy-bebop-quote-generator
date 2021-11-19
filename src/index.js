@@ -31,7 +31,7 @@ const image = async (path) => {
   let maxWidth = 200;
   let maxHeight = 50;
   const Jimp = require('jimp');
-  const image = await Jimp.read(`${dirPath}/img/${quote}.jpg`);
+  const image = await Jimp.read(`${dirPath}/img/${assetName}.jpg`);
   const font = await Jimp.loadFont(Jimp.FONT_SANS_16_WHITE);
   image.print(
     font,
@@ -45,7 +45,7 @@ const image = async (path) => {
     maxWidth,
     maxHeight
   );
-  await image.writeAsync(path);
+  image.write(`${path}/${character}.png`);
 };
 
 module.exports = { quote, image };
