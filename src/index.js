@@ -21,10 +21,13 @@ const quote = () => {
 };
 
 const image = async (path) => {
-  const phrase = quote();
+  const character = characters[Math.floor(Math.random() * characters.length)];
+  const assetName = character.replace(/\ .*/g, "$'").toLowerCase();
   const dirPath = userPath.join(__dirname, '/assets');
   var quotes = require(`${dirPath}/quotes/q_${assetName}.json`);
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  const phrase = `${quote} - ${character}`;
+
   let maxWidth = 200;
   let maxHeight = 50;
   const Jimp = require('jimp');
