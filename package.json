@@ -1,10 +1,10 @@
 {
   "name": "cowboy-bebop-random-message",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "gives you a random message",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "javascript",
@@ -27,7 +27,9 @@
   "dependencies": {
     "jimp": "^0.16.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^27.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merRen22/cowboy-bebop-quote-generator.git"

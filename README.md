@@ -13,7 +13,7 @@ npm i cowboy-bebop-random-message
 ```javascript
 let cowboy = require('cowboy-bebop-random-message');
 
-// get a random quote
+// get a random quotes
 const quote = cowboy.quote();
 console.log(quote);
 
