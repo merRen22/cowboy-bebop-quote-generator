@@ -2,6 +2,8 @@
 
 To fill all your code with references to Cowboy Bebop now you can get random quotes and images with quotes.
 
+This is the original branch made with JS 100%
+
 ## Install
 
 ```npm
